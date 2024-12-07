@@ -23,7 +23,7 @@ const AnimatedCircle = () => {
           </p>
           <button
             onClick={handleStopRotation}
-            className="bg-blue-500 text-white cursor-pointer px-4 py-2 rounded-[40px] mt-3 hover:-translate-y-1 hover:shadow-md duration-500"
+            className="bg-blue-500 hover:bg-black text-white cursor-pointer px-4 py-2 rounded-[40px] mt-3 hover:-translate-y-1 hover:shadow-md duration-500"
           >
             Click me
           </button>
