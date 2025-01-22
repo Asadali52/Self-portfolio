@@ -32,7 +32,7 @@ const Contact = () => {
 
       <h5 className="text-4xl font-bold text-center py-2">Contact</h5>
 
-      <div className="grid grid-cols-3 gap-10 px-24 ">
+      <div className="grid grid-cols-3 gap-10 max-[1024px]:grid-cols-1">
 
         <div className="space-y-6">
 
@@ -75,7 +75,7 @@ const Contact = () => {
         </div>
 
         <div className="col-span-2">
-          <div className="grid grid-cols-2 gap-5 pt-3">
+          <div className="grid grid-cols-2 max-[768px]:grid-cols-1 gap-5 pt-3">
             <input
               type="text"
               className="border w-full focus:outline-none px-2 h-[45px] text-[14px] focus:border-blue-500"

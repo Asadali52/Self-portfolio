@@ -52,8 +52,8 @@ const HowManyProjectsIWorked = () => {
   }, []);
 
   return (
-    <div className="px-24 py-3 flex justify-between" ref={elementRef}>
-      <div>
+    <div className="py-3 grid grid-cols-4 max-[1024px]:grid-cols-2 max-[400px]:grid-cols-1 gap-8" ref={elementRef}>
+      <div className="mx-auto w-[100px] whitespace-nowrap">
         <div className="h-[55px] w-[55px] rounded-full bg-[#0662bb] hover:bg-black transition-all duration-500 flex justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" stroke="white" width="32" height="32" viewBox="0 0 24 24">
             <g fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" color="currentColor">
@@ -64,7 +64,7 @@ const HowManyProjectsIWorked = () => {
         <p className="font-[700] text-3xl mt-3">{counts[0]}</p>
         <p className="text-[18px]">Happy Clients</p>
       </div>
-      <div>
+      <div className="mx-auto w-[100px] whitespace-nowrap">
         <div className="h-[55px] w-[55px] rounded-full bg-[#0662bb] hover:bg-black transition-all duration-500 flex justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
             <path fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="1.5" d="M12 12V6m-5 8V6m10 10V6M5.4 3h13.2A2.4 2.4 0 0 1 21 5.4v13.2a2.4 2.4 0 0 1-2.4 2.4H5.4A2.4 2.4 0 0 1 3 18.6V5.4A2.4 2.4 0 0 1 5.4 3" />
@@ -74,7 +74,7 @@ const HowManyProjectsIWorked = () => {
         <p className="text-[18px]">Projects</p>
       </div>
 
-      <div>
+      <div className="mx-auto w-[100px] whitespace-nowrap">
         <div className="h-[55px] w-[55px] rounded-full bg-[#0662bb] hover:bg-black transition-all duration-500 flex justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" fillRule="evenodd">
             <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
@@ -85,7 +85,7 @@ const HowManyProjectsIWorked = () => {
         <p className="text-[18px]">Hours of Support</p>
       </div>
 
-      <div>
+      <div className="mx-auto w-[100px] whitespace-nowrap">
         <div className="h-[55px] w-[55px] rounded-full bg-[#0662bb] hover:bg-black transition-all duration-500 flex justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" strokeWidth={2} viewBox="0 0 48 48">
             <rect width="37" height="37" x="5.5" y="5.5" fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" rx="4" ry="4" />

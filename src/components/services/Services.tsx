@@ -2,7 +2,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="px-24 grid grid-cols-3 gap-12 py-4">
+    <div className="grid grid-cols-3 max-[1100px]:grid-cols-2 max-[500px]:grid-cols-1 gap-12 py-4">
 
       <div className="bg-white service-card-shadow px-4 pt-2 pb-4 group border-b-2 border-b-transparent hover:border-b-2 hover:border-b-[orange] transition-all duration-700 hover:animate-bottom-border">
         <div className="flex justify-center items-center relative">

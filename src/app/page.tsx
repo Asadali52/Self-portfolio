@@ -6,12 +6,14 @@ import Services from "@/components/services/Services";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div>
       <HomeSection />
-      <Contact />
-      <Services />
-      <HowManyProjectsIWorked/>
-      <AnimatedCircle />
+      <div className="min-h-screen px-24 max-[768px]:px-16 max-[374px]:px-8">
+        <Contact />
+        <Services />
+        <HowManyProjectsIWorked />
+        {/* <AnimatedCircle /> */}
+      </div>
     </div>
   );
 };

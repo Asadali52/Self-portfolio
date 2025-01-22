@@ -9,7 +9,7 @@ const AnimatedCircle = () => {
   };
 
   return (
-    <div className="grid h-[550px] grid-cols-2 gap-8 bg-gray-400 py-8 px-24">
+    <div className="grid h-[550px] grid-cols-2 gap-8 bg-gray-400 py-8">
 
       <div className="text-[18px] my-auto">
         <h6 className="text-4xl font-bold py-3">Skill</h6>

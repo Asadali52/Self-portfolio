@@ -12,7 +12,7 @@ const Sidebar = () => {
 
 
   return (
-    <div className="fixed z-[1000] left-6 top-[50%] -translate-y-1/2 space-y-3">
+    <div className="fixed z-[1000] left-6 max-[768px]:left-2 top-[50%] -translate-y-1/2 space-y-3">
 
       {/* Home Option */}
       <div
