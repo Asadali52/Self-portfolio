@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   return (
-    <div ref={contactRef} className=" opacity-0 translate-y-10 transition-all duration-700 py-4">
+    <div ref={contactRef} className=" opacity-0 translate-y-10 transition-all duration-700 py-12">
 
       <h5 className="text-4xl font-bold text-center py-2">Contact</h5>
 

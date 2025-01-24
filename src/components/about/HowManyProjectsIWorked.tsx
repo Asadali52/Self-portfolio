@@ -52,7 +52,7 @@ const HowManyProjectsIWorked = () => {
   }, []);
 
   return (
-    <div className="py-3 grid grid-cols-4 max-[1024px]:grid-cols-2 max-[400px]:grid-cols-1 gap-8" ref={elementRef}>
+    <div className="py-12 grid grid-cols-4 max-[1024px]:grid-cols-2 max-[400px]:grid-cols-1 gap-8" ref={elementRef}>
       <div className="mx-auto w-[100px] whitespace-nowrap">
         <div className="h-[55px] w-[55px] rounded-full bg-[#0662bb] hover:bg-black transition-all duration-500 flex justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" stroke="white" width="32" height="32" viewBox="0 0 24 24">
