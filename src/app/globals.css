@@ -30,3 +30,103 @@ body {
 .service-card-shadow {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
+
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotate {
+  animation: rotate 50s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 59s linear infinite;
+  width: 100%;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+.animate-scroll>* {
+  width: 13%;
+}
+
+@media screen and (max-width: 1220px) {
+  .animate-scroll>* {
+    width: 15%;
+  }
+  .animate-scroll {
+    animation: scroll 34s linear infinite;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .animate-scroll>* {
+    width: 20%;
+  }
+  .animate-scroll {
+    animation: scroll 27s linear infinite;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .animate-scroll>* {
+    width: 23%;
+  }
+  .animate-scroll {
+    animation: scroll 22s linear infinite;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .animate-scroll>* {
+    width: 27%;
+  }
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .animate-scroll>* {
+    width: 33%;
+  }
+  .animate-scroll {
+    animation: scroll 19s linear infinite;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .animate-scroll>* {
+    width: 40%;
+  }
+  .animate-scroll {
+    animation: scroll 16s linear infinite;
+  }
+}
