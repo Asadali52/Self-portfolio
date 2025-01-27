@@ -130,3 +130,12 @@ body {
     animation: scroll 16s linear infinite;
   }
 }
+
+.footer-translate-class {
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}
+
+.footer-translate-class:hover {
+  transform: translateX(5px);
+}

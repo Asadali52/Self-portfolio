@@ -2,6 +2,7 @@ import HowManyProjectsIWorked from "@/components/about/HowManyProjectsIWorked";
 import AnimatedCircle from "@/components/animatedCircle/AnimatedCircle";
 import AnimatedScroll from "@/components/animatedCircle/AnimatedScroll";
 import Contact from "@/components/contact/Contact";
+import Footer from "@/components/footer/Footer";
 import HomeSection from "@/components/home/HomeSection";
 import OurVisionAndMission from "@/components/services/OurVisionAndMission";
 import Services from "@/components/services/Services";
@@ -18,6 +19,7 @@ export default function Home() {
         <Services />
         {/* <AnimatedCircle /> */}
       </div>
+      <Footer/>
     </div>
   );
 };
