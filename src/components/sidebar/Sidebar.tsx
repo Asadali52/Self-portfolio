@@ -10,6 +10,12 @@ const Sidebar = () => {
   const [hoverGithub, setHoverGithub] = useState(false);
   const [hoverSocialMedia, setHoverSocialMedia] = useState(false);
 
+  const handleScroll = (id: any) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <div className="fixed z-[1000] left-6 max-[768px]:left-2 top-[50%] -translate-y-1/2 space-y-3">
@@ -18,6 +24,7 @@ const Sidebar = () => {
       <div
         onMouseEnter={() => setHoverHome(true)}
         onMouseLeave={() => setHoverHome(false)}
+        onClick={() => handleScroll("home")}
       >
         <div
           className={`flex items-center cursor-pointer transition-all duration-500 overflow-hidden
@@ -38,6 +45,7 @@ const Sidebar = () => {
       <div
         onMouseEnter={() => setHoverAbout(true)}
         onMouseLeave={() => setHoverAbout(false)}
+        onClick={() => handleScroll("about")}
       >
         <div
           className={`flex items-center cursor-pointer transition-all duration-500 overflow-hidden
@@ -60,6 +68,7 @@ const Sidebar = () => {
       <div
         onMouseEnter={() => setHoverServices(true)}
         onMouseLeave={() => setHoverServices(false)}
+        onClick={() => handleScroll("services")}
       >
         <div
           className={`flex items-center cursor-pointer transition-all duration-500 overflow-hidden
@@ -102,6 +111,7 @@ const Sidebar = () => {
       <div
         onMouseEnter={() => setHoverContact(true)}
         onMouseLeave={() => setHoverContact(false)}
+        onClick={() => handleScroll("contact")}
       >
         <div
           className={`flex items-center cursor-pointer transition-all duration-500 overflow-hidden

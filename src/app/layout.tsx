@@ -35,7 +35,7 @@ export default function RootLayout({
       <body
         className={``}
       >
-        <Sidebar />
+        {/* <Sidebar /> */}
         {children}
       </body>
     </html>
