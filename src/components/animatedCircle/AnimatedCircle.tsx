@@ -13,13 +13,13 @@ const AnimatedCircle = () => {
 
       <div className="text-[18px] my-auto">
         <h6 className="text-4xl font-bold py-3">Skill</h6>
-        <p>"I am a passionate UI developer with expertise in creating visually appealing and highly functional web interfaces. With strong skills in HTML, CSS, Tailwind CSS, JavaScript, and React, I build seamless user experiences. My proficiency extends to modern libraries like shadcn, Material-UI (MUI), Ant Design, Bootstrap, and Framer Motion, enabling me to deliver dynamic and interactive designs. I am dedicated to crafting innovative solutions that blend creativity with technical excellence."</p>
+        <p>&quot;I am a passionate UI developer with expertise in creating visually appealing and highly functional web interfaces. With strong skills in HTML, CSS, Tailwind CSS, JavaScript, and React, I build seamless user experiences. My proficiency extends to modern libraries like shadcn, Material-UI (MUI), Ant Design, Bootstrap, and Framer Motion, enabling me to deliver dynamic and interactive designs. I am dedicated to crafting innovative solutions that blend creativity with technical excellence.&quot;</p>
       </div>
 
       <div className="flex justify-center items-center relative">
         <div className="absolute text-center z-[100] w-[200px]">
           <p className="text-[17px]">
-            "Skilled in HTML, CSS, JavaScript, React, and Tailwind CSS, I create seamless, responsive, and visually appealing user interfaces."
+            &quot;Skilled in HTML, CSS, JavaScript, React, and Tailwind CSS, I create seamless, responsive, and visually appealing user interfaces.&quot;
           </p>
           <button
             onClick={handleStopRotation}

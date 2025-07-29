@@ -10,7 +10,7 @@ const Sidebar = () => {
   const [hoverGithub, setHoverGithub] = useState(false);
   const [hoverSocialMedia, setHoverSocialMedia] = useState(false);
 
-  const handleScroll = (id: any) => {
+  const handleScroll = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -87,7 +87,7 @@ const Sidebar = () => {
       </div>
 
       {/* GitHub Option */}
-      <a href="https://github.com/Asadali52" target="_blank" rel="noopener noreferrer" className="block">
+      <a href="https://github.com/Asadali52?tab=repositories" target="_blank" rel="noopener noreferrer" className="block">
         <div
           onMouseEnter={() => setHoverGithub(true)}
           onMouseLeave={() => setHoverGithub(false)}

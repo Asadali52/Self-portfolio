@@ -1,20 +1,12 @@
 'use client'
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
 
   const [email, setEmail] = useState("");
   const [borderColor, setBorderColor] = useState("focus:border-blue-500");
-  const contactRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const contactElement = contactRef.current;
-    if (contactElement) {
-      contactElement.classList.add("animate-contact");
-    }
-  }, []);
-
-  const handleInputChange = (e: any) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setEmail(value);
 
@@ -28,9 +20,25 @@ const Contact = () => {
   };
 
   return (
-    <div ref={contactRef} className=" opacity-0 translate-y-10 transition-all duration-700 py-12">
-
-      <h5 className="text-4xl font-bold text-center py-2">Contact</h5>
+    <div className="py-8">
+      
+      {/* Beautiful Heading Section */}
+      <div className="text-center mb-8">
+        <div className="inline-block mb-3">
+          <span className="text-sm font-medium text-blue-600 bg-blue-50 px-4 py-2 rounded-full">
+            Get In Touch
+          </span>
+        </div>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <span className="bg-gradient-to-r from-[#012641] via-blue-600 to-[#012641] bg-clip-text text-transparent">
+            Let&apos;s Connect
+          </span>
+        </h2>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Ready to bring your ideas to life? I&apos;m here to help you create exceptional digital experiences. 
+          Let&apos;s discuss your project and turn your vision into reality.
+        </p>
+      </div>
 
       <div className="grid grid-cols-3 gap-10 max-[1024px]:grid-cols-1">
 

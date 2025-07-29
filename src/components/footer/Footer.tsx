@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import FacebookIcon from "@/assests/svgs/facebook-svg.svg";
@@ -10,85 +11,116 @@ import EmailSendIcon from "@/assests/svgs/send-email-svg.svg";
 
 const Footer = () => {
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="bg-[#F5F5F7] whitespace-nowrap text-left px-24 max-[768px]:px-16">
-      <div className="grid grid-cols-4 py-12 border-b max-[920px]:grid-cols-2 max-[435px]:grid-cols-1 gap-x-10 max-[900px]:gap-x-4 gap-y-8 max-[425px]:gap-y-4 whitespace-nowrap px-32 max-[1023px]:px-10 max-[768px]:px-6 max-[425px]:px-3 ">
+    <div className="bg-[#F5F5F7] text-left">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-12 border-b border-gray-200">
 
-        <div className="">
-          <h1 className="text-[#012641] leading-[30px] text-[42px] font-[800] whitespace-nowrap">Company</h1>
-          <p className="text-[14px] mt-6 text-[#000] max-[768px]:text-[13px] whitespace-normal w-[80%] max-[530px]:text-[12px]">Join Our Business Circle and unlock endless possibilities to earn, save, and grow.</p>
-          <div className="flex items-center gap-3 mt-4">
-            <Image src={FacebookIcon} alt="" className="cursor-pointer" />
-            <Image src={InstagramIcon} alt="" className="cursor-pointer" />
-            <Image src={TwitterIcon} alt="" className="cursor-pointer" />
-            <Image src={LinkedInIcon} alt="" className="cursor-pointer" />
+          {/* Personal Branding */}
+          <div className="lg:col-span-1">
+            <h1 className="text-[#012641] leading-tight text-2xl sm:text-3xl lg:text-4xl font-[800] mb-4">Asad Ali</h1>
+            <p className="text-sm sm:text-base text-[#000] mb-6 leading-relaxed">
+              Passionate developer and freelancer specializing in creating exceptional web experiences with modern technologies and innovative design solutions.
+            </p>
+            <div className="flex items-center gap-3">
+              <Image src={FacebookIcon} alt="Facebook" className="cursor-pointer w-6 h-6 sm:w-7 sm:h-7" />
+              <Image src={InstagramIcon} alt="Instagram" className="cursor-pointer w-6 h-6 sm:w-7 sm:h-7" />
+              <Image src={TwitterIcon} alt="Twitter" className="cursor-pointer w-6 h-6 sm:w-7 sm:h-7" />
+              <Image src={LinkedInIcon} alt="LinkedIn" className="cursor-pointer w-6 h-6 sm:w-7 sm:h-7" />
+            </div>
           </div>
+
+          {/* Portfolio Navigation */}
+          <div className="space-y-3 text-sm sm:text-base text-[#000]">
+            <div className="flex items-center gap-3 mb-4">
+              <p className="text-lg sm:text-xl font-[500]">Portfolio</p>
+              <Image src={HorizontalLine} alt="" className="w-16 sm:w-20" />
+            </div>
+            <div className="space-y-2">
+              <div className="flex items-center gap-3">
+                <Image src={RightArrow} alt="" className="w-3 h-3" />
+                <p className="cursor-pointer hover:text-[#012641] transition-colors" onClick={() => scrollToSection('home')}>Home</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Image src={RightArrow} alt="" className="w-3 h-3" />
+                <p className="cursor-pointer hover:text-[#012641] transition-colors" onClick={() => scrollToSection('about')}>About</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Image src={RightArrow} alt="" className="w-3 h-3" />
+                <p className="cursor-pointer hover:text-[#012641] transition-colors" onClick={() => scrollToSection('services')}>Services</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Image src={RightArrow} alt="" className="w-3 h-3" />
+                <p className="cursor-pointer hover:text-[#012641] transition-colors" onClick={() => scrollToSection('projects')}>Projects</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Image src={RightArrow} alt="" className="w-3 h-3" />
+                <p className="cursor-pointer hover:text-[#012641] transition-colors" onClick={() => scrollToSection('contact')}>Contact</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div className="space-y-3 text-sm sm:text-base text-[#000]">
+            <div className="flex items-center gap-3 mb-4">
+              <p className="text-lg sm:text-xl font-[500]">Services</p>
+              <Image src={HorizontalLine} alt="" className="w-16 sm:w-20" />
+            </div>
+            <div className="space-y-2">
+              <div className="flex items-center gap-3">
+                <Image src={RightArrow} alt="" className="w-3 h-3" />
+                <p className="footer-translate-class">Custom UI Development</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Image src={RightArrow} alt="" className="w-3 h-3" />
+                <p className="footer-translate-class">Interactive Web Apps</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Image src={RightArrow} alt="" className="w-3 h-3" />
+                <p className="footer-translate-class">Responsive Design</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Image src={RightArrow} alt="" className="w-3 h-3" />
+                <p className="footer-translate-class">Performance Optimization</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Get In Touch */}
+          <div className="space-y-4 text-sm sm:text-base text-[#000]">
+            <div className="flex items-center gap-3 mb-4">
+              <p className="text-lg sm:text-xl font-[500]">Get In Touch</p>
+              <Image src={HorizontalLine} alt="" className="w-16 sm:w-20" />
+            </div>
+            <div className="relative w-full max-w-xs">
+              <input 
+                type="email" 
+                placeholder="Your email..." 
+                className="h-12 w-full pl-4 pr-16 focus:outline-none border border-gray-300 rounded-full text-sm"
+              />
+              <span className="w-12 h-12 rounded-full flex justify-center items-center bg-[#012641] absolute right-0 top-0 cursor-pointer">
+                <Image src={EmailSendIcon} alt="Send" className="w-5 h-5" />
+              </span>
+            </div>
+            <p className="text-xs sm:text-sm text-gray-600">Available for freelance opportunities</p>
+          </div>
+
         </div>
 
-        <div className="space-y-2 text-[15px] text-[#000] max-[1023px]:text-[14px] max-[768px]:text-[13px] max-[530px]:text-[12px]">
-          <div className="flex items-center gap-3 max-[550px]:gap-2 mb-4">
-            <p className="text-[18px] font-[500]">Main Page</p>
-            <Image src={HorizontalLine} alt="" />
-          </div>
-          <div className="flex items-center gap-3">
-            <Image src={RightArrow} alt="" />
-            <p className="inline cursor-pointer footer-translate-class">What is Company</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <Image src={RightArrow} alt="" />
-            <p className="inline cursor-pointer footer-translate-class">How it works</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <Image src={RightArrow} alt="" />
-            <p className="inline cursor-pointer footer-translate-class">Ambassadors</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <Image src={RightArrow} alt="" />
-            <p className="inline cursor-pointer footer-translate-class">Services categories</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <Image src={RightArrow} alt="" />
-            <p className="inline cursor-pointer footer-translate-class">Contact</p>
+        {/* Copyright Section */}
+        <div className="py-4 sm:py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-2 text-xs sm:text-sm text-[#000]">
+            <p>© 2024 Asad Ali | All Rights Reserved</p>
+            <p>Terms & Condition | Privacy Policy</p>
           </div>
         </div>
-
-        <div className="space-y-2 text-[15px] text-[#000] max-[1023px]:text-[14px] max-[768px]:text-[13px] max-[530px]:text-[12px]">
-          <div className="flex items-center gap-3 max-[550px]:gap-2 mb-4">
-            <p className="text-[18px] font-[500]">Quick Links</p>
-            <Image src={HorizontalLine} alt="" />
-          </div>
-          <div className="flex items-center gap-3">
-            <Image src={RightArrow} alt="" />
-            <p className="inline cursor-pointer footer-translate-class">About</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <Image src={RightArrow} alt="" />
-            <p className="inline cursor-pointer footer-translate-class">Support</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <Image src={RightArrow} alt="" />
-            <p className="inline cursor-pointer footer-translate-class">FAQ’s</p>
-          </div>
-        </div>
-
-        <div className="space-y-2 mx-auto max-[920px]:mx-0 text-[15px] text-[#000] max-[1023px]:text-[14px] max-[768px]:text-[13px] max-[530px]:text-[12px]">
-          <div className="flex items-center gap-3 max-[550px]:gap-2 mb-4">
-            <p className="text-[18px] font-[500]">Join For Updates</p>
-            <Image src={HorizontalLine} alt="" />
-          </div>
-          <div className="relative w-[200px]">
-            <input type="email" placeholder="Your email..." className="h-[50px] w-full pl-4 pr-20 focus:outline-none border border-[#696969] rounded-full" />
-            <span className="w-[60px] h-[50px] rounded-full flex justify-center items-center bg-[#012641] absolute right-0 top-0 cursor-pointer">
-              <Image src={EmailSendIcon} alt="" />
-            </span>
-          </div>
-        </div>
-
-      </div>
-
-      <div className="text-[14px] whitespace-nowrap px-32 max-[1023px]:px-10 max-[768px]:px-6 max-[425px]:px-3 text-[#000] max-[768px]:text-[13px] max-[435px]:flex-col max-[530px]:text-[12px] flex justify-between gap-x-4 gap-y-2 py-5">
-        <p className="inline cursor-pointer">© Com 2024 | All Rights Reserved</p>
-        <p className="inline cursor-pointer">Terms & Condition | Privacy Policy</p>
       </div>
     </div>
   );

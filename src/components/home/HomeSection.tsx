@@ -51,18 +51,18 @@ const HomeSection = () => {
   return (
     <div
       className="relative h-screen flex flex-col items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: "url(https://plus.unsplash.com/premium_photo-1732730224448-4d964e7d99fc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)" }}
+      style={{ backgroundImage: "url(/hero.jpg)" }}
     >
       <h2 className="absolute cursor-pointer z-[1] top-8 left-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-3xl md:text-5xl font-bold">
         Portfolio
       </h2>
 
-      <div className={`absolute inset-0 bg-black bg-opacity-40 backdrop-blur-md ${backdropClass}`} />
+      <div className={`absolute inset-0 bg-black bg-opacity-40 backdrop-blur-sm ${backdropClass}`} />
 
       <div className={`relative text-center text-white ${contentClass}`}>
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Asad Ali</h1>
         <p className="text-2xl md:text-4xl">
-          I’m a{" "}
+          I&apos;m a{" "}
           <span className="font-bold">
             {currentRole}
             <span className={`${cursorVisible ? "opacity-100" : "opacity-0"} transition-opacity`}>|</span>

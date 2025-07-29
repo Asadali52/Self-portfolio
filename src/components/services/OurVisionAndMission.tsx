@@ -6,16 +6,17 @@ import VisionImg from "@/assests/pngs/our-vision-and-mission.png";
 const OurVisionAndMission = () => {
 
   return (
-    <div className='py-5'>
+    <div>
 
       <div className="grid grid-cols-2 gap-10 max-[900px]:gap-6 max-[768px]:grid-cols-1">
         <div className='text-left my-auto text-[15px] max-[1024px]:text-[14px] text-[#000] max-[768px]:text-[13px] max-[530px]:text-[12px] order-[1]'>
-          <h5 className='font-[700] text-[24px]'>Our Vision & Mission</h5>
+          <h5 className='font-[700] text-[24px]'>My Vision & Mission</h5>
           <p className='mt-4'><span className='font-bold'>Vision:</span>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praum repellat nobis ame olestiae debitis expedita accusantium quibusdam eum itaque sunt temporibus harum pariatur modi consequuntur quis laudantium, inventore ex, amet odio aspernatur ipsum vel. Iure odio dolor culpa reprehenderit blanditiis ex asperiores deserunt. Est numquam fugit consequuntur nihil nulla qui quas officia unde excepturi deleniti itaque, optio, sapiente debitis, ullam quo! Fugiat, aliquam eum tempore quibusdam quam molestias officiis est beatae numquam distinctio sed iste deleniti earum debitis facere quia id autem delectus illo incidunt corporis!
+            To become a leading developer who creates exceptional digital experiences that not only meet client expectations but exceed them. I envision a future where every project I touch transforms into an engaging, user-centric solution that drives business growth and user satisfaction. Through continuous learning and innovation, I aim to push the boundaries of web development while maintaining the highest standards of code quality and design excellence.
           </p>
           <p className='mt-4 max-[1180px]:hidden'><span className='font-bold'>Mission:</span>
-            Lorem ipsum dolor sit amet consectetur ue? A reprehenderit reiciendis, offic laboriosam facere minus asperiores quo velit architecto suscipit eum voluptatem est mollitia placeat neque, iusto vel quasi perspiciatis, doloremque ab voluptates beatae molestiae. Aliquid provident quisquam itaque molestias ipsam doloremque. Doloremque voluptates aspernatur facere corrupti ab quidem minima accusamus ullam incidunt, assumenda hic temporibus blanditiis voluptatum exercitationem delectus quod, earum magni, quae ipsa minus odit. Error distinctio aspernatur, iure minima quod ratione voluptatem accusantium est neque illum dolor fugiat et beatae? Porro, distinctio at! Earum!          </p>
+            My mission is to deliver cutting-edge web solutions that combine technical expertise with creative design thinking. I strive to build responsive, performant, and accessible applications that provide seamless user experiences across all devices. By staying current with emerging technologies and best practices, I ensure that every project leverages the most effective tools and methodologies to achieve optimal results for clients and end-users alike.
+          </p>
         </div>
         <div className="flex justify-center items-center max-[768px]:justify-start">
           <Image src={VisionImg} alt="img" className='w-full rounded-[10px] max-[1023px]:w-[90%] max-[768px]:w-full' />
@@ -23,7 +24,7 @@ const OurVisionAndMission = () => {
       </div>
 
       <p className='mt-6 max-[768px]:mt-3 text-[15px] max-[1024px]:text-[14px] text-[#000] max-[768px]:text-[13px] max-[530px]:text-[12px] text-left hidden max-[1180px]:block'><span className='font-bold'>Mission:</span>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur faiandae debitis delectus veritatis, ratione animi, natus doloremque, unde eius error laborum. Totam magni sint, nisi voluptatibus nulla, earum similique vitae culpa quo quia nobis temporibus cumque obcaecati recusandae cupiditate et soluta dolorem rerum enim, ab inventore nemo perferendis voluptatum quos. Reiciendis fugit aliquid a commodi quaerat quibusdam atque facere voluptate ab. Quos alias error dolor facere suscipit, vero ipsam consequatur dolorem, eum commodi excepturi maxime quis quia nam, culpa aperiam sint officiis veniam. Commodi, labore, eligendi laboriosam, vitae et dignissimos officiis itaque enim error odio sit?
+        My mission is to deliver cutting-edge web solutions that combine technical expertise with creative design thinking. I strive to build responsive, performant, and accessible applications that provide seamless user experiences across all devices. By staying current with emerging technologies and best practices, I ensure that every project leverages the most effective tools and methodologies to achieve optimal results for clients and end-users alike.
       </p>
 
     </div>
