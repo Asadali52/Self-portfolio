@@ -1,14 +1,45 @@
 'use client'
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Sidebar = () => {
-
   const [hoverHome, setHoverHome] = useState(false);
   const [hoverAbout, setHoverAbout] = useState(false);
   const [hoverServices, setHoverServices] = useState(false);
   const [hoverContact, setHoverContact] = useState(false);
   const [hoverGithub, setHoverGithub] = useState(false);
   const [hoverSocialMedia, setHoverSocialMedia] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  useEffect(() => {
+    let scrollTimeout: NodeJS.Timeout;
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (Math.abs(currentScrollY - lastScrollY) > 5) {
+        setIsScrolling(true);
+        setIsVisible(false);
+      }
+
+      clearTimeout(scrollTimeout);
+
+      scrollTimeout = setTimeout(() => {
+        setIsScrolling(false);
+        setIsVisible(true);
+      }, 300); 
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, []);
 
   const handleScroll = (id: string) => {
     const section = document.getElementById(id);
@@ -18,7 +49,10 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="fixed z-[1000] left-6 max-[768px]:left-2 top-[50%] -translate-y-1/2 space-y-3">
+    <div 
+      className={`fixed z-[1000] left-6 max-[768px]:left-2 top-[50%] -translate-y-1/2 space-y-3 transition-all duration-500 ease-in-out
+        ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}
+    >
 
       {/* Home Option */}
       <div
