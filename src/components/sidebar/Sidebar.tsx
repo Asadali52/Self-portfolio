@@ -10,6 +10,7 @@ const Sidebar = () => {
   const [hoverSocialMedia, setHoverSocialMedia] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolling, setIsScrolling] = useState(false);
+  
 
   useEffect(() => {
     let scrollTimeout: NodeJS.Timeout;
