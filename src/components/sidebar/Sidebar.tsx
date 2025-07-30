@@ -9,8 +9,6 @@ const Sidebar = () => {
   const [hoverGithub, setHoverGithub] = useState(false);
   const [hoverSocialMedia, setHoverSocialMedia] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [isScrolling, setIsScrolling] = useState(false);
-  
 
   useEffect(() => {
     let scrollTimeout: NodeJS.Timeout;
@@ -20,14 +18,12 @@ const Sidebar = () => {
       const currentScrollY = window.scrollY;
       
       if (Math.abs(currentScrollY - lastScrollY) > 5) {
-        setIsScrolling(true);
         setIsVisible(false);
       }
 
       clearTimeout(scrollTimeout);
 
       scrollTimeout = setTimeout(() => {
-        setIsScrolling(false);
         setIsVisible(true);
       }, 300); 
 
